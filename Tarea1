@@ -1,0 +1,20 @@
+/**
+ * Germán HV
+ * 6NV60 Programación Móvil
+ */
+fun main() {
+    println("HelloUPIICSA!!!")
+    println("Soy un alumno")
+    print("HelloUpiicsa")
+    print(" soy un Alumno")
+
+}
+-- JSON
+{
+  "version": "1.9.10",
+  "platform": "java",
+  "args": "",
+  "noneMarkers": true,
+  "theme": "idea",
+  "code": "/**\n * Germán HV\n * 6NV60 Programación Móvil\n */\nfun main() {\n    println(\"HelloUPIICSA!!!\")\n    println(\"Soy un alumno\")\n    print(\"HelloUpiicsa\")\n    print(\" soy un Alumno\")\n\n}"
+}
