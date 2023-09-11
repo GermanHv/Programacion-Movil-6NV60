@@ -1,0 +1,9 @@
+/**
+ * GermanHV 6NV60
+ * Variables y tipos de datos
+ */
+const val pi = 3.141592
+fun main() {
+val perimetro = pi*2
+println( "El perímetro del círculo es: "+ perimetro)
+}
