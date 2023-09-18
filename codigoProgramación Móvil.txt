@@ -1,0 +1,22 @@
+ 
+import kotlin.math.pow
+const val Pi= 3.1416f
+const val PHI= 1.6118f
+
+fun main() {
+    val edad: Int=25
+    println("Tengo $edad años")
+    println("en 4 años tendré ${edad+4} años")
+    
+    val decimal= 1.544
+    println(decimal.javaClass.kotlin)
+    val decimal1= 1.342F
+    println(decimal1.javaClass.kotlin)
+    
+    val perimetro= Pi*2*decimal1
+    println("El perímetro del círculo es: $perimetro")
+}
+
+fun circleArea(radius:Float): Float{
+    return Pi*radius.pow(2)
+}
