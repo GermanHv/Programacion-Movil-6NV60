@@ -1,0 +1,12 @@
+/**
+ * GermánHV  6NV60
+ * Operadores
+ */
+fun main() {
+val y2= -2
+val y1= -3
+val x2= 3
+val x1= 4
+val  m = y2-y1/x2-x1
+println( "El valor de la pendiente es: "+ m )
+}
