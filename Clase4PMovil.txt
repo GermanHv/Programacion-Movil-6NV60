@@ -1,0 +1,101 @@
+
+fun main() {
+val nombres = listOf(
+    "Kirby",
+    "Ness",
+    "Fox",
+    "Luigi",
+    "Mario",
+    "Link",
+    "Captain Falcon",
+    "Samus",
+    "Pikachu",
+    "Jigglypuff",
+    "Donkey Kong",
+    "Yoshi",
+)
+    for(nombre in nombres){
+        println(nombre)
+    }
+    
+    nombres.forEach{println(it)}
+    for(nombre in nombres){
+        println(nombre)
+        if (nombre=="Link"){
+            println("Personaje encontrado!")
+            break
+        }
+    }
+    
+    //Ejercicio
+    val Lista= listOf (
+    "Pedro Luis",
+    "Juan Manuel",
+    "Juan Luis",
+    "María Inés",
+    "Romeo",
+    "Ernesto",
+    "Juan Pedro",
+    "Ariadna",
+    "Mireya María",
+    "Ana Sofía",
+    "José Juan",
+)
+    fun countName(name:String): Int{
+        var count=0
+        for (currentName in Lista){
+            if (name in currentName){
+                count++
+            }
+        }
+        return count
+    }
+    
+    val nameCount = countName("Juan")
+    println("Tu nombre se encontró $nameCount veces")
+    
+    //While
+    var x=20
+    while (x>0){
+        println(x)
+        x--
+    }
+    
+    //Otra forma de utilizar el ciclo while
+    var y=10
+    do{
+        //código a ejecutar
+        println(y)
+        y--
+    }while (y>0)
+    
+    //Lista de colección de items ordenados
+    val numeros=listOf ("uno","dos","tres")
+    println("Numero de elementos: ${nombres.size}")
+    println("Tercer elemento: ${nombres.get(3)}")
+    println("Quinto elemento: ${nombres[5]}")
+    println("Último elemento: ${nombres.get(nombres.size-1)}")
+    println("Index del elemento \"Donkey Kong\": ${nombres.indexOf("Donkey Kong")}")
+    
+    val list=mutableListOf(1,2,3,4)
+    //Agregar elementos
+    list.add(5)
+    //Remover elementos
+    list.removeAt(1)
+    //Modificar elementos
+    list[0]=0
+    println(list)
+    
+    //SET's elementos únicos que no se repiten: el alfabeto.
+    val numSet: Set<Int> = setOf(0,1,2,3,4,5)
+    val reverseNumSet: Set<Int> = setOf(5,4,3,2,1,0)
+    //Set mutable
+    var names: Set<String> = mutableSetOf("Nombre 1","Nombre 2")
+    println(numSet)
+    
+    //Mapa o diccionarios
+    //Conjunto en pares clave-valor, las vlaves son únicas y se asignan a un valor
+    val namesToAges: Map<String,Int> = mapOf("user_one" to 20, "user_two" to 23)
+    println(namesToAges)
+    
+}
