@@ -1,0 +1,80 @@
+// 19/09/23
+
+import kotlin.math.pow
+const val Pi= 3.1416f
+const val PHI= 1.6118f
+
+fun main(){
+	val radius =4f
+    val area= circleArea(radius)
+    println("el área del círculo es: $area")
+    println(getPi())
+    printPhi()
+    val userValidated = login("Alumno","1")
+    println("Usuario loggeado? $userValidated") //imprime si el usuario esta registrado
+    println("Area con valores por defecto: ${rectangleArea(10.0,20.0)}")
+    println("Volumen de un prisma rectangular: ${volPrimaRec(10.0,20.0,5.0)}")
+    val ancho=5.0
+    imprimir("Reemplazo del primer valor")
+    imprimir("Reemplazo del primer valor", "Reemplazo del segundo valor")
+    imprimir(valor2="Reemplazo del segundo valor")
+    println (promedio(tercera=5f))
+}
+
+fun circleArea(radius:Float): Float{
+    return Pi*radius.pow(2)
+}
+/*función sin parametros*/
+fun getPi(): Float{
+    return Pi
+}
+/*función sin parametros y no regresa ningun valor*/
+fun printPhi(){
+    println("El número áureo vale $PHI")
+}
+/*funciones locales*/
+fun login(user: String, password: String): Boolean {
+    fun validate(input: String): Boolean{
+        if (input.isEmpty()){
+            return false
+        }
+        return true
+    }
+    val userValidated = validate(user)
+    val passValidated = validate(password)
+    
+    return userValidated && passValidated
+}
+
+//area de un rectangulo
+fun rectangleArea(base:Double=20.0, height: Double=30.0): Double{
+    return base*height
+}
+/*
+fun rectangleArea(base, height){
+    return base*height
+}
+*/
+
+fun volPrimaRec(long: Double,base: Double, height: Double): Double{
+       return base*height*long
+}
+/* Ej. del profe
+fun volumenPrisma(base:Float, altura:Float, ancho: Float):Float{
+    return rectangleArea(base,altura)*ancho
+}
+*/
+
+fun imprimir(
+	valor: String="Este es el primer valor por defecto",
+    valor2: String="Este es el segundo valor por defecto"){
+    println(valor)
+    println(valor2)
+}
+
+fun promedio(
+	primera: Float=8f,
+    segunda: Float=8f,
+    tercera:Float):Float{
+    return (primera+segunda+tercera)/3f
+}
